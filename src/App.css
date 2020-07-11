@@ -1,8 +1,15 @@
 .App {
+  background-color: #212f4c;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+
 }
+
 .body {
-  background-color: #336699;
+  background-color: #212f4c;
 }
 a,
 a:hover {
@@ -38,16 +45,9 @@ a:hover {
 
 .main-image {
   max-height: 80vh;
+  max-width: 50vw;
 }
-.App-header {
-  /* min-height: 100vh; */
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  padding-bottom: 10px;
-  background-color: #212f4c;
-  /* background-color: #4c7bdf; */
-}
+
 .tabs {
   position: relative;
   flex-direction: row;
@@ -66,13 +66,31 @@ li {
 .card {
   color: black;
 }
-
+.cards {
+  flex: 1 1 0px;
+}
 #footer {
   background-color: #212f4c;
 }
 
+.tabs-m {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
-  .d-flex {
+  .tabs {
+    display: none;
+  }
+  .tabs-m {
+    display: flex;
+  }
+  .cards {
     flex-direction: column;
+  }
+  .hero {
+    min-height: auto;
+  }
+  .main-image {
+    display: none;
   }
 }
